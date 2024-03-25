@@ -14,7 +14,7 @@ export default async function TopMenu (){
                 <div>{ session ? <Link href="/aboutme">About Me</Link> : ""}</div>
             </div>
             
-            <TopMenuItem title="Booking" pageRef="/booking"/>   
+            { session ? <TopMenuItem title="Booking" pageRef="/booking"/> : ""}
             <Image src={'/img/logo.png'} className="h-full w-auto" alt="logo" width={0} height={0} sizes="100vh"/>   
         </div>
     );

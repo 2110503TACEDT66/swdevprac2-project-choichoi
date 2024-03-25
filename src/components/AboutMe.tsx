@@ -1,8 +1,6 @@
 'use client'
 import getUserProfile from "@/libs/getUserProfile";
-import { TextField } from "@mui/material";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
 
 export default async function AboutMe(){
     const {data:session} = useSession()
