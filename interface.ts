@@ -2,19 +2,28 @@ interface HospitalItem {
     _id: string,
     name: string,
     address: string,
-    district: string,
-    province: string,
-    postalcode: string,
     tel: string,
     picture: string,
+    open_time: number,
+    close_time: number,
     __v: number,
     id: string
-  }
+}
+
   
 interface HospitalJson {
     success: boolean,
     count: number,
-    pagination: Object,
+    pagination: {
+      prev:{
+        page: number,
+        limit: number
+      },
+      next:{
+        page: number,
+        limit: number
+      }
+    },
     data: HospitalItem[]
 }
 
