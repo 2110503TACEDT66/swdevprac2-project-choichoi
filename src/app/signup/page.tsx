@@ -1,7 +1,6 @@
 "use client"
 import {TextField} from "@mui/material";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
 import { useState } from "react";
 import userSignup from "@/libs/userSignup";
 import { dbConnect } from "@/db/dbConnect";
@@ -9,8 +8,6 @@ import User from "@/db/models/User";
 import { revalidateTag } from "next/cache";
 
 export default function Signup(){
-
-    const dispatch = useDispatch<AppDispatch>();
 
     const [name,setName] = useState("");
     const [tel,setTel] = useState("");
