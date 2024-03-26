@@ -20,8 +20,8 @@ export default async function BookingList({token,rerender}: {token:string,rerend
                     <div className="bg-slate-200 rounded px-5 mx-5 py-2 my-2">
                         <ShopInfoCard hid={bookItem.shop.id}/>
                         <div>Reservation Time = {bookItem.date}</div>
-                        <Button className="rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm" onClick={()=>removeBooking(bookItem._id)}>remove booking</Button>
-                        <Link href={"/mybooking/"+bookItem._id} className="rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm" >edit booking</Link>
+                        <Button className="rounded-md bg-[#c6c2c2] hover:bg-[#d9d9d9] px-3 py-1 text-white shadow-sm mx-5" onClick={()=>removeBooking(bookItem._id)}>remove booking</Button>
+                        <Link href={"/mybooking/"+bookItem._id} className="rounded-md bg-[#c6c2c2] hover:bg-[#d9d9d9] h-6 px-3 py-1 text-white shadow-sm" >edit booking</Link>
                     </div>
                 )):<div>No Vaccine Booking</div>
             }
