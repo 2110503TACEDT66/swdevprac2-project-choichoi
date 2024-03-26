@@ -1,5 +1,5 @@
 export default async function deleteReservations(hid:string,token:string) {
-    const response = await fetch("http://localhost:5002/api/v1/reservations/"+hid,{
+    const response = await fetch("https://presentation-day-1-choichoi.vercel.app/api/v1/reservations/"+hid,{
         method:"DELETE",
         headers: {
             authorization: "Bearer " + token,

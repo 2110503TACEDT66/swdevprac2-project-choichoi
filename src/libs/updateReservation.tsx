@@ -1,6 +1,6 @@
 import { Dayjs } from "dayjs";
 export default async function updateReserve(resID:string,token:string,date:Dayjs) {
-    const response = await fetch("http://localhost:5002/api/v1/reservations/" + resID, {
+    const response = await fetch("https://presentation-day-1-choichoi.vercel.app/api/v1/reservations/" + resID, {
         method: "PUT", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
