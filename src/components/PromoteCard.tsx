@@ -9,10 +9,10 @@ export default function PromoteCard(){
 
     const [playing,setPlaying] = useState(true);
     return(
-        <div className="w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg bg-gray-200 flex flex-row">
+        <div className="w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg bg-[#c6c2c2] flex flex-row">
             <VideoPlayer vdoSrc="/vdo/getvaccine.mp4" isPlaying={playing}/>
             <div className="m-5">
-                Get your vaccine today.
+                Free Massage Anywhere Anytime!!!
                 <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm mt-10" onClick={()=>{setPlaying(!playing)}}>
                     {playing ? "Pause":"Play"}
                 </button>
