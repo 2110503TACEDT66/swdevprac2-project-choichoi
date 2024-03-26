@@ -34,3 +34,18 @@ interface BookingItem {
   hospital: string,
   bookDate: string
 }
+
+/*
+ "name":"{{$randomFirstName}}",
+    "tel":"{{$randomPhoneNumber}}",
+    "email":"testemail1@gmail.com",
+    "password":"12345678",
+    "role":"user"
+*/
+interface SignUpFormState  {
+  name: string,
+  tel: string,
+  email: string,
+  password: string,
+  role: string
+}

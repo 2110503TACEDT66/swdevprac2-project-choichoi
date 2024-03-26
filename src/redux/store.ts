@@ -1,5 +1,6 @@
 import { configureStore, combineReducers} from "@reduxjs/toolkit";
 import bookSlice from "./features/bookSlice";
+import signupSlice from "./features/signupSlice";
 import { useSelector, TypedUseSelectorHook } from "react-redux";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
@@ -9,7 +10,7 @@ const persistConfig = {
     storage,
 }
 
-const rootReducer = combineReducers({bookSlice});
+const rootReducer = combineReducers({bookSlice,signupSlice});
 const reduxPersistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
