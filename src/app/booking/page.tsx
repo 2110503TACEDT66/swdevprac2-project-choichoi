@@ -2,10 +2,7 @@
 import DateReserve from "@/components/DateReserve";
 import {Select, MenuItem, TextField} from "@mui/material";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "@/redux/store";
 import { useRouter } from "next/navigation";
-
-import { addBooking } from "@/redux/features/bookSlice";
 import { Suspense, useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { useSearchParams } from "next/navigation";
@@ -20,7 +17,6 @@ export default function Booking(){
     const router = useRouter();
     const session = useSession();
 
-    const dispatch = useDispatch<AppDispatch>();
 
     let date:Dayjs|null = null;
 
