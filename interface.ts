@@ -28,11 +28,12 @@ interface HospitalJson {
 }
 
 interface BookingItem {
-  name: string,
-  surname: string,
-  id: string,
-  hospital: string,
-  bookDate: string
+  _id:string,
+  date:string,
+  user:string,
+  shop:HospitalItem,
+  createdAt: string
+  v:number
 }
 
 /*

@@ -7,7 +7,7 @@ import PromoteCard from '@/components/PromoteCard'
 export default function Home() {
   return (
     <main>
-      <div>
+      <div className=' bg-[#928282]'>
         <Banner/>
         <PromoteCard/>
       </div>
