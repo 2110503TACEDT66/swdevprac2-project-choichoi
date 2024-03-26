@@ -31,7 +31,7 @@ export default function ProductCard(hospital:Props) {
                         (hospital.rating as Function)(hospital.hospitalName,newValue as number);
                     }}
                 />
-            </div> : ""}
+            </div> : null}
         </InteractiveCard>
     );
 };

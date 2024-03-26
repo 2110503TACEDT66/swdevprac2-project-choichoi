@@ -1,6 +1,6 @@
 "use client"
 import DateReserve from "@/components/DateReserve";
-import {Select, MenuItem, TextField} from "@mui/material";
+import {Select, MenuItem, TextField, LinearProgress} from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
 import { Suspense, useState } from "react";
@@ -29,7 +29,7 @@ export default function Booking(){
         <main>
             <div className="w-full flex flex-col items-center">
                 <div className="w-fit flex flex-col space-y-4">
-                    <Suspense>
+                    <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
                         <ShopInfoCard hid={hospital as string}/>
                     </Suspense>
                     <div>Store ID: {param.get("shop")}</div>
