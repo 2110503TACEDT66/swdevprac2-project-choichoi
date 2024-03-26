@@ -1,5 +1,5 @@
 export default async function userSignup(name:string,tel:string,email:string,password:string,role:string) {
-    const response = await fetch("http://localhost:5002/api/v1/auth/signup", {
+    const response = await fetch("http://localhost:5002/api/v1/auth/register", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -18,7 +18,7 @@ export default async function userSignup(name:string,tel:string,email:string,pas
 
     if(!response.ok){
         throw new Error("Something went wrong")
-    }
+    }else alert('success')
 
     return await response.json();
 

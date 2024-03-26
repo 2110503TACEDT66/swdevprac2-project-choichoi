@@ -1,13 +1,9 @@
 "use client"
-import DateReserve from "@/components/DateReserve";
-import {Select, MenuItem, TextField} from "@mui/material";
+import {TextField} from "@mui/material";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
-import { useRouter } from "next/router";
-
-import { addUser } from "@/redux/features/signupSlice";
 import { useState } from "react";
-import dayjs, { Dayjs } from "dayjs";
+import userSignup from "@/libs/userSignup";
 
 export default function Signup(){
 
@@ -28,7 +24,7 @@ export default function Signup(){
                 password: password,
                 role: role
             }
-            dispatch(addUser(user));
+            userSignup(user.name,user.tel,user.email,user.password,user.role)
             reset()
             return user;
         }
