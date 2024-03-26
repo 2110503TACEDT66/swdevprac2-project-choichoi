@@ -7,7 +7,6 @@ import userSignup from "@/libs/userSignup";
 import { dbConnect } from "@/db/dbConnect";
 import User from "@/db/models/User";
 import { revalidateTag } from "next/cache";
-import { createUser } from "./createUser";
 
 export default function Signup(){
 
@@ -18,7 +17,7 @@ export default function Signup(){
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const [role,setRole] = useState('');
-
+    
     function reset(){
         setName('')
         setTel('')
@@ -37,7 +36,7 @@ export default function Signup(){
                     <TextField id="Role" name="Role" label="Role" variant="standard" value={role} onChange={(event: React.ChangeEvent<HTMLInputElement>) => {setRole(event.target.value);}}/>
                     
                     
-                    <button name="Register" className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm  w-[70%] self-center" onClick={()=>{createUser(name,tel,email,password,role)}} >Register</button>
+                    <button name="Register" className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm  w-[70%] self-center" onClick={()=>{userSignup(name,tel,email,password,role)}} >Register</button>
                 </div>
             </div>
         </main>
