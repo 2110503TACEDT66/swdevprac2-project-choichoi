@@ -21,7 +21,7 @@ export default async function HospitalCatalog() {
             </div>
             <div className="m-[20px] flex flex-row flex-wrap justify-around content-around">
                 {hospitalJsonReady.data.map((hospital:HospitalItem)=>(
-                    <Link className=" my-5" href={"/hospital/"+hospital.id} key={hospital.id}>
+                    <Link className="text-black my-5" href={"/hospital/"+hospital.id} key={hospital.id}>
                         <Card hospitalName={hospital.name} imgSrc={hospital.picture}/>
                     </Link>
                     )

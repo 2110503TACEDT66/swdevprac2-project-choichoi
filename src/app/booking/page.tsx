@@ -27,14 +27,14 @@ export default function Booking(){
 
     return(
         <main>
-            <div className="w-full flex flex-col items-center">
+            <div className="w-full flex flex-col items-center bg-white shadow-md rounded-lg bg-opacity-40">
                 <div className="w-fit flex flex-col space-y-4">
                     <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
                         <ShopInfoCard hid={hospital as string}/>
                     </Suspense>
                     <div>Store ID: {param.get("shop")}</div>
                     <DateReserve onDateChange={(value:Dayjs)=>{date = value}}/>
-                    <button name="Reserve" className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm  w-[70%] self-center" onClick={makeBooking}>Reserve</button>
+                    <button name="Reserve" className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-1 text-white shadow-sm  w-[30%] self-center" onClick={makeBooking}>Reserve</button>
                 </div>
             </div>
         </main>
