@@ -8,12 +8,14 @@ export default async function AboutMe(){
     console.log(user);
     
     return(
-        <div>
-            <div>Name: {user.data.name}</div>
-            <div>Tel: {user.data.tel}</div>
-            <div>Email: {user.data.email}</div>
-            <div>Created At: {user.data.createdAt}</div>
-            <div>Role: {user.data.role}</div>
+        <div className="w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg bg-gray-200
+        flex flex-row">
+            <div className="m-5 flex flex-col text-black space-y-10 mx-8 ">
+                <div>Name: {user.data.name}</div>
+                <div>Email: {user.data.email}</div>
+                <div>Tel: {user.data.tel}</div>
+                <div>Role: {user.data.role}</div>
+            </div>
         </div>
     );
 }
