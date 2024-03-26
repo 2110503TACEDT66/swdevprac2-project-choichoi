@@ -8,7 +8,6 @@ export default function Home() {
     <main>
       <div className=' bg-[#928282]'>
         <Banner/>
-        <PromoteCard/>
       </div>
     </main>
   )
