@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import { useState } from "react";
 import userSignup from "@/libs/userSignup";
+import { dbConnect } from "@/db/dbConnect";
+import User from "@/db/models/User";
+import { revalidateTag } from "next/cache";
 
 export default function Signup(){
 
@@ -15,20 +18,20 @@ export default function Signup(){
     const [password,setPassword] = useState("");
     const [role,setRole] = useState('');
 
-    const createUser = () => {
-        if(name && tel && email && password && role){
-            const user:SignUpFormState = {
-                name: name,
-                tel: tel,
-                email: email,
-                password: password,
-                role: role
-            }
-            userSignup(user.name,user.tel,user.email,user.password,user.role)
-            reset()
-            return user;
+    const createUser = async () => {
+        'use server'
+        try{
+            await dbConnect()
+            const user = User.create({
+                'name':name,
+                'tel':tel,
+                'email':email,
+                'password':password,
+                'role':role
+            })
+        }catch(error){
+            console.log(error)
         }
-    
     }
 
     function reset(){
