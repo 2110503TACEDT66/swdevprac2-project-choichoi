@@ -19,7 +19,6 @@ export default async function ShopInfoCard({hid} : {hid:string}){
                     <div>{hospital.data.name}</div>
                     <div>{hospital.data.address}</div>
                     <div>Open: {toTimeString(hospital.data.open_time)} - {toTimeString(hospital.data.close_time)}</div>
-                    <div>{hospital.data.address}</div>
                     <div>Tel. {hospital.data.tel}</div>
                 </div>
                 
