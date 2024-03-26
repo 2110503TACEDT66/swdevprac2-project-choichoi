@@ -9,9 +9,7 @@ export default function ReduxProvider({children}:{children:React.ReactNode}) {
     let reduxPersistor = persistStore(store)
     return(
         <Provider store={store}>
-            <PersistGate loading={<p>Loading...<LinearProgress/></p>} persistor={reduxPersistor}>
                 {children}                
-            </PersistGate>
         </Provider>
     );
 }
